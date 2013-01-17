@@ -4,12 +4,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.1.4
+Version:	2.1.6
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	8e4b8c623e21289814cfceb946a0862a
+# Source0-md5:	8d791edda3d183c2174e0ae9c5a4364c
 URL:		http://symfony.com/doc/current/components/dependency_injection/index.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
