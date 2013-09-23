@@ -1,15 +1,14 @@
-%define		status		stable
 %define		pearname	DependencyInjection
 %define		php_min_version 5.3.3
 %include	/usr/lib/rpm/macros.php
-Summary:	%{pearname} - Symfony2 DependencyInjection Component
+Summary:	Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.1.6
+Version:	2.3.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	8d791edda3d183c2174e0ae9c5a4364c
+# Source0-md5:	a5421c960e7c087752383721f15060df
 URL:		http://symfony.com/doc/current/components/dependency_injection/index.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
@@ -24,21 +23,17 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Symfony2 DependencyInjection Component
-
-In PEAR status of this package is: %{status}.
+The Dependency Injection component allows you to standardize and
+centralize the way objects are constructed in your application.
 
 %prep
 %pear_package_setup
 
 # no packaging of tests
-rm -r .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests .
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist .
 
 # fixups
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/CHANGELOG.md .
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/.gitattributes
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/.gitignore
 mv docs/%{pearname}/Symfony/Component/%{pearname}/* .
 
 %install
@@ -59,5 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/Symfony/Component/DependencyInjection/Dumper
 %{php_pear_dir}/Symfony/Component/DependencyInjection/Exception
 %{php_pear_dir}/Symfony/Component/DependencyInjection/Extension
+%{php_pear_dir}/Symfony/Component/DependencyInjection/LazyProxy
 %{php_pear_dir}/Symfony/Component/DependencyInjection/Loader
 %{php_pear_dir}/Symfony/Component/DependencyInjection/ParameterBag
