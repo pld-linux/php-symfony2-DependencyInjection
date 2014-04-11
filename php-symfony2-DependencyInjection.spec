@@ -3,21 +3,26 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.3.4
+Version:	2.4.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	a5421c960e7c087752383721f15060df
+# Source0-md5:	9dc65a4c0f9853271ea53b6b4ee52278
 URL:		http://symfony.com/doc/current/components/dependency_injection/index.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(dom)
+Requires:	php(pcre)
+Requires:	php(simplexml)
+Requires:	php(spl)
 Requires:	php-channel(pear.symfony.com)
 Requires:	php-pear >= 4:1.3.10
 Suggests:	php-symfony2-Config
+Suggests:	php-symfony2-ProxyManagerBridge
 Suggests:	php-symfony2-Yaml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
