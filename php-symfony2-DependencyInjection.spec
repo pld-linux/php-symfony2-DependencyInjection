@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.7.3
+Version:	2.7.5
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	b4a06b0943bb28c2f446e58f64df61d3
+# Source0-md5:	f101ecae358955da6b406ffd781b8c2b
 URL:		http://symfony.com/doc/2.7/components/dependency_injection/index.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -31,7 +31,7 @@ The Dependency Injection component allows you to standardize and
 centralize the way objects are constructed in your application.
 
 %prep
-%setup -q -n %{package}-%{version}
+%setup -q -n dependency-injection-%{version}
 
 %build
 phpab -n -e '*/Tests/*' -o autoloader.php .
