@@ -17,6 +17,7 @@ Requires:	php(dom)
 Requires:	php(pcre)
 Requires:	php(simplexml)
 Requires:	php(spl)
+Requires:	php-dirs >= 1.6
 Suggests:	php-symfony2-Config
 Suggests:	php-symfony2-ProxyManagerBridge
 Suggests:	php-symfony2-Yaml
