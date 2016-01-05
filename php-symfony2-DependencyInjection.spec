@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.7.7
+Version:	2.7.8
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	6846f17ec53829e4672454f6d4e2db24
+# Source0-md5:	3315196a28777abe255df0f0c281d31d
 URL:		http://symfony.com/doc/2.7/components/dependency_injection/index.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
