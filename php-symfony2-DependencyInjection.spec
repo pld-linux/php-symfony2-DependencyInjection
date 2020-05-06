@@ -2,13 +2,13 @@
 %define		php_min_version 5.3.9
 Summary:	Symfony2 DependencyInjection Component
 Name:		php-symfony2-DependencyInjection
-Version:	2.7.8
+Version:	2.8.52
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	3315196a28777abe255df0f0c281d31d
-URL:		http://symfony.com/doc/2.7/components/dependency_injection/index.html
+# Source0-md5:	4abb0f37f8159cc686621c08871008bb
+URL:		https://symfony.com/doc/2.8/components/dependency_injection.htmlindex.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
